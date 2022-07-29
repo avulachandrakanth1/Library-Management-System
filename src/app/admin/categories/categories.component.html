@@ -73,7 +73,8 @@
                         class="caardimg">
                     <h1 class="text-center">{{cat.c_name}}</h1>
                     <div class="container btn-toolbar text-center delete">
-                        <button class="btn m-2 btn-sm btn-primary" (click)="view(cat.id)">View</button>
+                        <!-- <button class="btn m-2 btn-sm btn-primary" (click)="view(cat.id)">View</button> -->
+                        <button class="btn btn-outline-primary mb-2 me-2" (click)="openXl(content)">View</button>
                         <button class="btn  btn-sm m-2 btn-danger " id="delete" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">Delete</button>
                         <button class="btn btn-sm btn-success m-2 " (click)="update(content,cat)">Update</button>
@@ -140,7 +141,7 @@
     </div>
     <h4 class="modal-title text-center text-uppercase pt-1%" id="modal-basic-title">New Category/ Update</h4>
     <section class="update">
-       <div class="container">
+       <div class="container"> 
         <div class="formcard">
             <div class="form" id="form">
                 <div>
