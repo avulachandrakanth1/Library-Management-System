@@ -1,0 +1,22 @@
+.home{
+    background: linear-gradient(white,lightblue,white);
+    .card{
+        background: linear-gradient(to top left, #33ccff 0%, #ff99cc 100%);
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-top: 15px;
+        .img{
+            margin-top: 22%;
+        }
+    }
+    .text1{
+        // background-image: url('https://previews.123rf.com/images/vska/vska1602/vska160200074/53123972-abstract-digital-web-site-header-banner-tecnology-background.jpg');
+        h1{
+            font-family: 'Montserrat Alternates', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Rubik Moonrocks', cursive;
+            font-size: 38px;
+            margin: 0 20px;
+        }
+    }
+}

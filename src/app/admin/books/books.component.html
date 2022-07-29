@@ -1,0 +1,218 @@
+<app-header></app-header>
+<section class="books">
+    <div class="insert">
+        <button class="btn btn-sm btn-light btn-outline-primary" (click)="createBook(content)">New Book</button>
+    </div>    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12" *ngFor="let book of books">
+                <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
+                        class="caardimg rounded">
+                    <h3 class="text-center text-uppercase">{{book.b_name}}</h3>
+                    <div class="container">
+                        <h4 >{{book.author}}</h4>
+                        <p>{{book.description}}</p>
+                        <div class="container btn-toolbar text-center delete">
+                        <button class="btn btn-danger m-2 btn-sm" id="delete" data-bs-toggle="modal" (click)="deleteBook(book.id)" >Delete</button>
+                        <button class="btn btn-sm m-2 btn-success"  (click)="open(content , book)">Update</button>
+                    </div>
+                    </div>
+    
+                </div>
+            </div>   
+            <!-- <div class="col-lg-4 col-md-6 col-12">
+                <div class="card">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
+                        class="caardimg rounded">
+                    <h3 class="text-center text-uppercase">To Kill a Mockingbird</h3>
+                    <div class="container">
+                        <h4 >by Harper Lee</h4>
+                        <div class="container btn-toolbar text-center delete">
+                        <button class="btn btn-sm m-2 btn-primary"  (click)="openXl(longContent)">View</button>
+                        <button class="btn btn-danger m-2 btn-sm" id="delete" data-bs-toggle="modal" data-bs-target="#exampleModal" >Delete</button>
+                        <button class="btn btn-sm m-2 btn-success"  (click)="open(content)">Update</button>
+                    </div>
+                    </div>
+    
+                </div>
+            </div>  
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="card">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
+                        class="caardimg rounded">
+                    <h3 class="text-center text-uppercase">To Kill a Mockingbird</h3>
+                    <div class="container">
+                        <h4 >by Harper Lee</h4>
+                        <div class="container btn-toolbar text-center delete">
+                        <button class="btn btn-sm m-2 btn-primary"  (click)="openXl(longContent)">View</button>
+                        <button class="btn btn-danger m-2 btn-sm" id="delete" data-bs-toggle="modal" data-bs-target="#exampleModal" >Delete</button>
+                        <button class="btn btn-sm m-2 btn-success"  (click)="open(content)">Update</button>
+                    </div>
+                    </div>
+    
+                </div>
+            </div>  
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="card">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
+                        class="caardimg rounded">
+                    <h3 class="text-center text-uppercase">To Kill a Mockingbird</h3>
+                    <div class="container">
+                        <h4 >by Harper Lee</h4>
+                        <div class="container btn-toolbar text-center delete">
+                        <button class="btn btn-sm m-2 btn-primary"  (click)="openXl(longContent)">View</button>
+                        <button class="btn btn-danger m-2 btn-sm" id="delete" data-bs-toggle="modal" data-bs-target="#exampleModal" >Delete</button>
+                        <button class="btn btn-sm m-2 btn-success"  (click)="open(content)">Update</button>
+                    </div>
+                    </div>
+    
+                </div>
+            </div>  
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="card">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
+                        class="caardimg rounded">
+                    <h3 class="text-center text-uppercase">To Kill a Mockingbird</h3>
+                    <div class="container">
+                        <h4 >by Harper Lee</h4>
+                        <div class="container btn-toolbar text-center delete">
+                        <button class="btn btn-sm m-2 btn-primary"  (click)="openXl(longContent)">View</button>
+                        <button class="btn btn-danger m-2 btn-sm" id="delete" data-bs-toggle="modal" data-bs-target="#exampleModal" >Delete</button>
+                        <button class="btn btn-sm m-2 btn-success"  (click)="open(content)">Update</button>
+                    </div>
+                    </div>
+    
+                </div>
+            </div>  
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="card">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
+                        class="caardimg rounded">
+                    <h3 class="text-center text-uppercase">To Kill a Mockingbird</h3>
+                    <div class="container">
+                        <h4 >by Harper Lee</h4>
+                        <div class="container btn-toolbar text-center delete">
+                        <button class="btn btn-sm m-2 btn-primary"  (click)="openXl(longContent)">View</button>
+                        <button class="btn btn-danger m-2 btn-sm" id="delete" data-bs-toggle="modal" data-bs-target="#exampleModal" >Delete</button>
+                        <button class="btn btn-sm m-2 btn-success"  (click)="open(content)">Update</button>
+                    </div>
+                    </div>
+    
+                </div>
+            </div>        -->
+        </div>
+    </div>    
+</section>
+
+<!-- Update/New -->
+<ng-template #content let-c="close" let-d="dismiss" >
+    <div class="modal-header">
+        <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+    </div>
+    <section class="update">
+        <div class="container">
+            <h4 class="modal-title text-center text-uppercase pt-2" id="modal-basic-title">New Book/ Update</h4>
+            <div class="formcard">
+                <div class="form" id="form">
+                    <!-- <div>
+                        <select name="Category"[(ngModel]='' class="inputbox" id="category">
+                            <option>Select</option>
+                            <option>Classic</option>
+                            <option>Tragedy</option>
+                            <option>Horror</option>
+                            <option>Romance</option>
+                        </select>
+                    </div> -->
+                    <div>
+                        <input [(ngModel)]="newBook.b_name" type="text" class="inputbox" id="name" onkeydown="return /[a-z]/i.test(event.key)"
+                            placeholder="Book Name">
+                    </div>
+                    <div>
+                        <input [(ngModel)]="newBook.author" type="text" class="inputbox" placeholder="Author Name">
+                    </div>
+                    <div>
+                        <input [(ngModel)]="newBook.description" class="inputbox" placeholder="Description">
+                    </div>
+                    <div>
+                        <!-- <input [(ngModel)]="newBook.cat_id" type="number" class="inputbox" id="name" maxlength="4" placeholder="Category Id"> -->
+                    </div>
+            
+                    <div>
+                        <span>Cover Image</span>
+                        <input [(ngModel)]="newBook.image_cover" type="file" class="inputbox" name="myfile">
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" aria-label="Close" (click)="d('Cross click')">cancel</button>
+        <button type="button" class="btn btn-outline-success" (click)="postBook()">Save</button>
+        <button type="button" class="btn btn-outline-success" (click)="updateBook()">Update</button>
+    </div>
+</ng-template>
+
+  <!-- delete -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+
+            <div class="modal-body">
+
+                Are You Sure You Want TO <b> Delete</b>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+
+                <button type="button" class="btn btn-danger">Yes</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- View -->
+<ng-template #longContent let-modal>
+    <div class="modal-header">
+        <h1>To Kill a Mockingbird</h1>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
+                class="img-fluid">
+            </div>
+            <div class="col-lg-8">
+                <h3>By Harper Lee</h3>                
+                <hr>
+                <h4>Description</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eaque consequatur doloribus molestiae adipisci reprehenderit quos expedita commodi unde laborum ipsum eum ducimus, nam totam labore, cum quia? Quo, nobis.</p>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="modal.close('Close click')">Close</button>
+      <button type="button" class="btn btn-success" (click)="modal.close('Close click')">Request</button>    </div>
+  </ng-template>
+  

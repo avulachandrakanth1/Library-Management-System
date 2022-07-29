@@ -1,0 +1,77 @@
+
+.btn1{
+    font-size: 30px;
+    padding-top: 5px;
+    margin: 0 20px;
+}
+.navbg{
+    color: linear-gradient(red,blue);
+    background-color: linear-gradient(to bottom right, lightblue, yellow);
+}
+.nav-link{
+    margin: 0 15px;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.logo{
+    h1{
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Rubik Moonrocks', cursive;
+        font-size: 33px;
+        background: -webkit-linear-gradient(skyblue,orange,white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0 15px 0 0;
+    }
+}
+.header{
+    background-image: url('https://media.istockphoto.com/vectors/website-header-or-banner-design-with-abstract-geometric-background-vector-id1157596540?k=20&m=1157596540&s=170667a&w=0&h=K9M5wUS4Eu1PZEp7P2qJEPIqc7nHBru9M2ylo8cjjtA=');
+    background-repeat: repeat;
+    background-size: auto  ;
+    color: white;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    a{
+        color: white;
+    }
+}
+.card{
+    margin: 30px;
+    background: linear-gradient(to bottom right, lightblue, yellow);
+.inputfield{
+    padding: 0 5px;
+    width: 55%;
+    height: 30px;
+    margin: 8px auto;
+    border-radius: 9px;
+}
+}
+h2{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik Moonrocks', cursive;
+    font-size: 33px;
+    background: -webkit-linear-gradient(white,lightblue,white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 15px 0 0;
+}
+.return{
+    background: linear-gradient(white,lightblue,white);
+    padding:  20px 15%;
+}
+.inputbox{
+    font-size: 15px;
+    color: #666;
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    border-radius: 9px;
+    padding:15px;
+    margin-bottom: 10px;
+    border: 0px;
+}

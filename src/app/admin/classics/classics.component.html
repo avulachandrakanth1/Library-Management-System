@@ -1,0 +1,95 @@
+<app-header></app-header>
+<hr>
+<!-- <div class="insert">
+    <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Add Book</button>
+</div> -->
+<div class="contaniner">
+    <div class="container-fluid">
+        <div class="row">
+            <h2 class="text-center text-uppercase">Classic Books</h2>
+            <div class="col-lg-4 col-md-2 col-12" *ngFor="let book of c_book">
+                <div class="card">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
+                        class="caardimg">
+                    <h1 class="text-center">{{book.b_name}}</h1>
+                    <span>{{book.author}}</span>
+                    <!-- <span>Category:</span>
+                    <p>Classic</p> -->
+                </div>
+            </div>
+            <!-- <div class="col-lg-4 col-md-2 col-12">
+                <div class="card">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
+                        class="caardimg">
+                    <h1 class="text-center">To Kill a Mockingbird</h1>
+                    <span>by Harper Lee</span>
+                    <span>Category:</span>
+                    <p>Classic</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-2 col-12">
+                <div class="card">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
+                        class="caardimg">
+                    <h1 class="text-center">To Kill a Mockingbird</h1>
+                    <span>by Harper Lee</span>
+                    <span>Category:</span>
+                    <p>Classic</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-2 col-12">
+                <div class="card">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
+                        class="caardimg">
+                    <div class="text-center">
+                        <h1 class="text-center">To Kill a Mockingbird</h1>
+                    <span>by Harper Lee</span>
+                    <span>Category:</span>
+                    <p>Classic</p>
+                    </div>
+                </div>
+            </div>       
+            <div class="col-lg-4 col-md-2 col-12">
+                <div class="card">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
+                        class="caardimg">
+                    <h1 class="text-center">To Kill a Mockingbird</h1>
+                    <span>by Harper Lee</span>
+                    <span>Category:</span>
+                    <p>Classic</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-2 col-12">
+                <div class="card">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
+                        class="caardimg">
+                    <h1 class="text-center">To Kill a Mockingbird</h1>
+                    <span>by Harper Lee</span>
+                    <span>Category:</span>
+                    <p>Classic</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<!-- Update -->
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <!-- <h4 class="modal-title" id="modal-basic-title">Update</h4> -->
+      <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+    </div>
+    <div class="card modal-body inputbox">
+        <h1 class="text-center text-uppercase">New Book</h1>
+        <input class="inputfield" type="text" placeholder="Category"><br>
+     <input class="inputfield" type="text" placeholder="Book Title"><br>
+     <input class="inputfield" type="text" placeholder="Author"><br>
+     <input class="inputfield" type="email" placeholder="Description"><br>
+     <input class="inputfield" type="number" placeholder="Copies"><br>
+  
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" aria-label="Close" (click)="d('Cross click')">cancel</button>
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save/Update</button>
+    </div>
+  </ng-template>

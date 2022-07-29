@@ -1,0 +1,36 @@
+.header{
+    background-image: url('https://1r65612jvqxn8fcup46pve6b-wpengine.netdna-ssl.com/wp-content/uploads/2018/05/grf-bg.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    h1{
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Rubik Moonrocks', cursive;
+        font-size: 33px;
+        background: -webkit-linear-gradient(orange,white,skyblue, orange,white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .btn{
+            height: 39px;
+
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h2{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik Moonrocks', cursive;
+    background: -webkit-linear-gradient(skyblue,white,orange,red,darkred);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin: 0 20px;
+    font-size: 38px;
+    margin: 0 20px;
+}

@@ -1,0 +1,63 @@
+.card{
+    margin: 15px auto;
+   
+}
+.caardimg{
+    padding: 24px 25%;
+}
+.delete{
+    justify-content: center;
+
+    margin-bottom: 10px;
+}
+.insert{
+    justify-content: left;
+    margin-left:   90%;
+}
+.inputfield{
+    border-radius: 5px;
+}
+.categories{
+    background: linear-gradient(white,lightblue,white);
+    // background-image: url('https://media.istockphoto.com/photos/blur-school-library-or-study-room-with-book-shelves-for-education-picture-id1066991874?k=20&m=1066991874&s=612x612&w=0&h=6Xj8Tn1Nom2avLJihf6jL7IaDDy2qlwjv0hAk2pdXGE=');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.card{
+    background: linear-gradient(white,lightblue,white);
+    margin: 15px auto;
+    .profile{
+        padding: 15px;
+    }
+    .caardimg{
+        border-radius: 9px;
+    }
+    .btns{
+        justify-content: space-between;
+        margin-bottom: 10px;
+        justify-content: space-between;
+    }
+   
+}
+.insert{
+    margin-left:88% ;
+}
+.inputbox{
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666;
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    height: 50px;
+    border-radius: 25px;
+    padding:20px;
+    margin-bottom: 10px;
+    border: 0px;
+}
+
+.update{
+    background: linear-gradient(white,lightblue,white);
+    padding: 15%;
+}

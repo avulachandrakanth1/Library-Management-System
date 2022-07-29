@@ -1,0 +1,170 @@
+<!-- <header class="adminheader">
+    <nav class="navbar navbar-expand-lg nav navbar-nav w-100 justify-content-between bg-dark navbar-dark">
+        <ul class="navbar-nav">
+           
+                <button class="btn float-end btn1" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button" >
+                    <i class="fas fa-bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" routerLink="/sidenav"></i>
+                </button>
+            
+            <div class="img">
+                    <img src="https://as1.ftcdn.net/v2/jpg/03/20/71/68/1000_F_320716884_l67qkkHW1Yfamt4gDYH5wKCMizFdAmRl.jpg"
+                        class="img-fluid img">
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="#adminhome">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Branches</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#">Notifications</a>
+            </li>
+            <li>
+                <div class="signout">
+                    <button class="nav-button btn btn-primary"> Sign Out</button>
+                </div>
+            </li>
+           
+        </ul>
+
+    </nav>
+
+</header> -->
+
+<header class="header">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <button class="btn btn1 float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+                <i class="fas fa-bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" style="color: white;"></i>
+            </button>
+            <a href="#admin-home" class="navbar-brand">
+                <img class="img rounded-circle" src="https://thumbs.dreamstime.com/z/book-digital-technology-logo-vector-app-103472410.jpg" height="58" alt="CoolBrand">
+            </a>
+            <div class="logo">
+                <a href="#adminHome"><h1>BCP DIGITAL LIBRARY</h1></a>
+            </div>
+            
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <button  class=" btn btn-light btn-outline-danger" (click)="logout()" >Sign Out</button>
+                </div>
+            </div>
+        </div>
+    </nav>  
+</header>
+<marquee class="text1 shadow-lg p-3 mb-5 bg-white rounded">
+    <h2><i class='fas fa-laptop-house' style='font-size:48px;'></i>BCP DIGITAL LIBRARY</h2>
+</marquee>
+
+
+
+
+
+
+
+
+
+<div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
+    <div class="offcanvas-header">
+        <h4 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h4>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body px-0 ">
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+            <li>
+                <a href="#stats" data-bs-toggle="collapse" class="nav-link text-truncate">
+                    <i class="fas fa-chart-line text-danger"></i>   <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+            </li>
+
+
+            <!-- Categories -->
+            <li>
+                <a  data-bs-toggle="collapse" data-bs-dismiss="offcanvas"  class="nav-link text-truncate" routerLink="/admin/categories">
+                    <i class="fas fa-stream text-primary"></i><span class="ms-1 d-none d-sm-inline">Categories</span> </a>
+            </li>
+
+
+            <!-- Books Menu -->
+            <li>
+                <a  data-bs-toggle="collapse" data-bs-dismiss="offcanvas" class="nav-link text-truncate" routerLink="/admin/books">
+                    <i class="fas fa-book-reader text-success"></i><span class="ms-1 d-none d-sm-inline">Books</span> </a>
+            </li>
+
+
+            <!-- Users Menu -->
+            <li>
+                <a  data-bs-toggle="collapse" data-bs-dismiss="offcanvas" class="nav-link text-truncate" routerLink="/admin/users">
+                    <i class="fas fa-users text-primary"></i><span class="ms-1 d-none d-sm-inline">Users</span> </a>
+            </li>
+
+            <!-- Book Copies -->
+
+            <li>
+                <a  data-bs-toggle="collapse" data-bs-dismiss="offcanvas" class="nav-link text-truncate" routerLink="/admin/bookcopies">
+                    <i class="fas fa-book-reader text-success"></i><span class="ms-1 d-none d-sm-inline">Book Copies</span> </a>
+            </li>
+
+            <!-- Transactions -->
+            <li class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-sync text-danger"></i><span class="ms-1 d-none d-sm-inline">Transactions</span>
+                </a>
+                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
+                    <li><a class="dropdown-item" routerLink="/admin/issue">Issuing Book</a></li>
+                    <li><a class="dropdown-item" (click)="open(content)">Return Book</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!-- Returning Book -->
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <!-- <h4 class="modal-title" id="modal-basic-title">Update</h4> -->
+      <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+    </div>
+    <section class="return">
+        <div class="container">
+            <h3 class="text-center text-uppercase">Return Book</h3>
+            <div class="modal-body">
+                <div class="form">
+                    <div>
+                        <label><b>User Id</b></label>
+                        <select class="inputbox" name="userid" id="useid">
+                            <option>Select</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label><b>Book Id</b></label>
+                        <select class="inputbox" name="bookid" id="bookid">
+                            <option>Select</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-outline-danger" aria-label="Close" (click)="d('Cross click')">cancel</button>
+      <button type="button" class="btn btn-outline-success" (click)="c('Save click')"><i class="fa-solid fa-book-copy"></i>Return</button>
+    </div>
+  </ng-template>

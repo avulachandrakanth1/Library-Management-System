@@ -1,0 +1,86 @@
+<app-header></app-header>
+<section class="mylist">
+    <div class="container">
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Issue Date</th>
+                    <th scope="col">Return Date</th>
+                    <th scope="col">Extend Date</th>
+                    <th scope="col">Return</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td type="text">I too had a Love Story</td>
+                    <td>19-07-2022</td>
+                    <td>03-08-2022</td>
+                    <td><input type="date"></td>
+                    <td>                        <button class="btn  btn-sm m-2 btn-danger " id="delete" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Return</button>
+</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td type="text">I too had a Love Story</td>
+                    <td>19-07-2022</td>
+                    <td>03-08-2022</td>
+                    <td><input type="date"></td>
+                    <td><button class="btn  btn-sm m-2 btn-danger " id="delete" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Return</button>
+</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td type="text">I too had a Love Story</td>
+                    <td>19-07-2022</td>
+                    <td>03-08-2022</td>
+                    <td><input type="date"></td>
+                    <td><button class="btn  btn-sm m-2 btn-danger " id="delete" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Return</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</section>
+
+<!-- Return -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="exampleModalLabel">Return</h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+
+            <div class="modal-body">
+
+                Are You Sure You Want TO <b> Return the Book</b>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+
+                <button type="button" class="btn btn-danger">Yes</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

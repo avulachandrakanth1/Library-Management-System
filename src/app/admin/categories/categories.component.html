@@ -1,0 +1,202 @@
+<header>
+    <app-header></app-header>
+</header>
+<div class="categories">
+    <div class="insert pt-2">
+        <button class="btn btn-md btn-light btn-outline-primary " (click)="open(content)">Add Category</button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col-lg-4 col-md-2 col-12">
+                <div class="card">
+                    <img src="https://cdn.w600.comps.canstockphoto.com/classic-b…-logo-design-template-eps-vectors_csp87504837.jpg"
+                        class="caardimg">
+                    <h1 class="text-center">CLASSICS</h1>
+                    <div class="container btn-toolbar text-center delete">
+                        <button class="btn m-2 btn-sm btn-primary" routerLink="/admin/classics">View</button>
+                        <button class="btn  btn-sm m-2 btn-danger " id="delete" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Delete</button>
+                        <button class="btn btn-sm btn-success m-2 " (click)="open(content)">Update</button>
+                    </div>
+    
+                </div>
+                
+            </div>
+            <div class="col-lg-4 col-md-2 col-12">
+                <div class="card">
+                    <img src="https://cdn.w600.comps.canstockphoto.com/classic-b…-logo-design-template-eps-vectors_csp87504837.jpg"
+                        class="caardimg">
+                    <h1 class="text-center">CLASSICS</h1>
+                    <div class="container btn-toolbar text-center delete">
+                        <button class="btn m-2 btn-sm btn-primary" routerLink="/admin/classics">View</button>
+                        <button class="btn  btn-sm m-2 btn-danger " id="delete" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Delete</button>
+                        <button class="btn btn-sm btn-success m-2 " (click)="open(content)">Update</button>
+                    </div>
+    
+                </div>
+                
+            </div>
+            <div class="col-lg-4 col-md-2 col-12">
+                <div class="card">
+                    <img src="https://cdn.w600.comps.canstockphoto.com/classic-b…-logo-design-template-eps-vectors_csp87504837.jpg"
+                        class="caardimg">
+                    <h1 class="text-center">CLASSICS</h1>
+                    <div class="container btn-toolbar text-center delete">
+                        <button class="btn m-2 btn-sm btn-primary" routerLink="/admin/classics">View</button>
+                        <button class="btn  btn-sm m-2 btn-danger " id="delete" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Delete</button>
+                        <button class="btn btn-sm btn-success m-2 " (click)="open(content)">Update</button>
+                    </div>
+    
+                </div>
+                
+            </div>
+            <div class="col-lg-4 col-md-2 col-12">
+                <div class="card">
+                    <img src="https://cdn.w600.comps.canstockphoto.com/classic-b…-logo-design-template-eps-vectors_csp87504837.jpg"
+                        class="caardimg">
+                    <h1 class="text-center">CLASSICS</h1>
+                    <div class="container btn-toolbar text-center delete">
+                        <button class="btn m-2 btn-sm btn-primary" routerLink="/admin/classics">View</button>
+                        <button class="btn  btn-sm m-2 btn-danger " id="delete" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Delete</button>
+                        <button class="btn btn-sm btn-success m-2 " (click)="open(content)">Update</button>
+                    </div>
+    
+                </div>
+                
+            </div> -->
+            <div class="col-lg-4 col-md-2 col-12" *ngFor="let cat of category">
+                <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                    <img src="https://cdn.w600.comps.canstockphoto.com/classic-b…-logo-design-template-eps-vectors_csp87504837.jpg"
+                        class="caardimg">
+                    <h1 class="text-center">{{cat.c_name}}</h1>
+                    <div class="container btn-toolbar text-center delete">
+                        <button class="btn m-2 btn-sm btn-primary" (click)="view(cat.id)">View</button>
+                        <button class="btn  btn-sm m-2 btn-danger " id="delete" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Delete</button>
+                        <button class="btn btn-sm btn-success m-2 " (click)="update(content,cat)">Update</button>
+                    </div>
+    
+                </div>
+                
+            </div>
+
+            <!-- <div class="col-lg-4 col-md-2 col-12">
+                    <div class="card">
+                        <img src="https://cdn.xxl.thumbs.canstockphoto.com/comedy-an…eater-masks-with-a-red-eps-vectors_csp7800383.jpg"
+                            class="caardimg">
+                            <a routerLink="admin/tragedy">
+                                <h1 class="text-center">TRAGEDY</h1>
+                            </a>                    
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-2 col-12">
+                    <div class="card">
+                        <img src="https://cdn.xxl.thumbs.canstockphoto.com/comedy-an…eater-masks-with-a-red-eps-vectors_csp7800383.jpg"
+                            class="caardimg">
+                            <a routerLink="admin/classic">
+                                <h1 class="text-center">Humor</h1>
+                            </a>                    
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-2 col-12">
+                    <div class="card">
+                        <img src="https://cdn.xxl.thumbs.canstockphoto.com/comedy-an…eater-masks-with-a-red-eps-vectors_csp7800383.jpg"
+                            class="caardimg">
+                            <a routerLink="admin/classic">
+                                <h1 class="text-center">Sci-fi</h1>
+                            </a>                    
+                    </div>
+                </div>       
+                <div class="col-lg-4 col-md-2 col-12">
+                    <div class="card">
+                        <img src="https://cdn.xxl.thumbs.canstockphoto.com/comedy-an…eater-masks-with-a-red-eps-vectors_csp7800383.jpg"
+                            class="caardimg">
+                            <a routerLink="admin/classic">
+                                <h1 class="text-center">Fantasy</h1>
+                            </a>                    
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-2 col-12">
+                    <div class="card">
+                        <img src="https://cdn.xxl.thumbs.canstockphoto.com/comedy-an…eater-masks-with-a-red-eps-vectors_csp7800383.jpg"
+                            class="caardimg">
+                            <a routerLink="admin/classic">
+                                <h1 class="text-center">Romance</h1>
+                            </a>                    
+                    </div>
+                </div> -->
+        </div>
+    </div>
+
+</div>
+
+<!-- Update -->
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+    </div>
+    <h4 class="modal-title text-center text-uppercase pt-1%" id="modal-basic-title">New Category/ Update</h4>
+    <section class="update">
+       <div class="container">
+        <div class="formcard">
+            <div class="form" id="form">
+                <div>
+                    <input type="text" class="inputbox"  [(ngModel)]="newCat.c_name" id="name" onkeydown="return /[a-z]/i.test(event.key)"
+                        placeholder="Category Name">
+                </div>
+                <div>
+                    <input type="text" id="shortname" maxlength="10" [(ngModel)]="newCat.c_desc" class="inputbox" placeholder="Short Name">
+                </div>
+            </div>
+        </div>
+       </div>
+    
+    </section>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-outline-danger" aria-label="Close" (click)="d('Cross click')">cancel</button>
+      <button type="button" class="btn btn-outline-success" (click)="addCategory()">Save</button>
+      <button type="button" class="btn btn-outline-success" (click)="updateCategory()">Update</button>
+
+    </div>
+  </ng-template>
+  <!-- Update -->
+
+  
+
+  <!-- delete -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+
+            <div class="modal-body">
+
+                Are You Sure You Want TO <b> Delete</b>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+
+                <button type="button" class="btn btn-danger">Yes</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,174 @@
+<app-header></app-header>
+
+<div class="insert pt-2">
+    <button class="btn btn-sm btn-outline-primary" (click)="open(content)">New User</button>
+</div>
+<section class="users">
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col-lg-6  col-12">
+                <div class="card" >
+                    <ul class="list-group">
+                        <li 
+                            *ngFor="let post of users"
+                            class="list-group-item">
+                            {{ post.user_name }}
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="col-lg-6  col-12" *ngFor="let user of users">
+                <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="container">
+                        <div class="profile text-center">
+                            <img class="caardimg img-fluid"
+                                src="https://st2.depositphotos.com/3369547/8161/v/380/depositphotos_81611508-stock-illustration-web-developer-design.jpg?forcejpeg=true">
+                            <h5 class="text-uppercase"><b>{{user.user_name}}</b></h5>
+                        </div>
+            
+            
+                        <div class="details m-3">
+                            <p>
+                                <b>Phone : </b><span>{{user.pho_no}}</span>
+                            </p>
+                            <p>
+                                <b>Email : </b><span>{{user.user_email}}</span>
+                            </p>
+                            <p>
+                                <b>DOB : </b><span>{{user.dob}}</span>
+                            </p>
+                            <p>
+                                <b>Address : </b><span>{{user.address}}</span>
+                            </p>
+            
+                        </div>
+            
+            
+                        <div class="btn-toolbar text-center btns">
+                            <!-- <button class="btn btn-sm btn-danger m-3 " id="delete" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Delete</button> -->
+                                <button type="button" class="btn btn-danger m-3" (click)="deleteUser(user.pho_no)">Yes</button>
+    
+                            <button class="btn btn-sm m-3 btn-success" (click)=" update(content,user)">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-6  col-12">
+                <div class="card">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="profile text-center">
+                                    <img class="caardimg img-fluid" src="https://st2.depositphotos.com/3369547/8161/v/380/depositphotos_81611508-stock-illustration-web-developer-design.jpg?forcejpeg=true" >
+                                    <h5 class="text-uppercase"><b>Chandrakanth</b></h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 ">
+                                <div class="details m-3">
+                                    <p>
+                                        <b>Phone : </b><span>9876543210</span>
+                                    </p>
+                                    <p>
+                                        <b>Email : </b><span>c@gmail.com</span>
+                                    </p>
+                                    <p>
+                                        <b>DOB : </b><span>17-02-2002</span>
+                                    </p>
+                                    <p>
+                                        <b>Address : </b><span>Bangalore</span>
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-toolbar text-center btns">
+                            <button class="btn btn-sm btn-danger m-3 " id="delete" data-bs-toggle="modal" data-bs-target="#exampleModal" >Delete</button>
+                            <button class="btn btn-sm m-3 btn-success" (click)=" updateUser()">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    
+</section>
+<!-- Update -->
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title text-center" id="modal-basic-title">New User / Update</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+    </div>
+    <section class="update">
+        <div class="container">
+            <div class="formcard">
+                <div class="form">
+                    <div>
+                        <input type="text" name="user_name" [(ngModel)]="newUser.user_name" class="inputbox" id="name" onkeydown="return /[a-z]/i.test(event.key)"
+                            placeholder="User Name">
+                    </div>
+                    <div>
+                        <input type="phone" [(ngModel)]="newUser.pho_no" id="phone" maxlength="10" class="inputbox" placeholder="Phone Number">
+                    </div>
+                    <div>
+                        <input type="email" [(ngModel)]="newUser.user_email" id="email" class="inputbox" placeholder="Email">
+                    </div>
+                    <div>
+                        <input type="password" [(ngModel)]="newUser.password" id="password" class="inputbox" placeholder="Password">
+                    </div>
+                    <div>
+                        <span>Date of Birth :</span>
+                        <input type="date" [(ngModel)]="newUser.dob" id="dob" class="inputbox" min="1998-08-1" max="2022-01-01" placeholder="Date of Birth">
+                    </div>
+                    <div>
+                        <textarea name="address"[(ngModel)]="newUser.address" id="address" class="inputbox text-area " id="address" cols="30" rows="5"
+                            placeholder="Address" style="border-radius: 15px"></textarea>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </section>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-danger" aria-label="Close" (click)="d('Cross click')">cancel</button>
+      <button type="button" class="btn btn-success" (click)="addUser()">Save</button>
+      <button type="button" class="btn btn-success" (click)="updateUser()">Update</button>
+
+    </div>
+  </ng-template>
+  <!-- Update -->
+
+
+  <!-- delete -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+
+            <div class="modal-body">
+
+                Are You Sure You Want TO <b> Delete</b>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+
+                <!-- <button type="button" class="btn btn-danger" (click)="deleteUser(pho_no)">Yes</button> -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

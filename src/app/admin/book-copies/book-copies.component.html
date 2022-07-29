@@ -1,0 +1,92 @@
+<header>
+    <app-header></app-header>
+</header>
+<section class="bookcopies">
+    <div class="container">
+        <h2 class="text-center ">Book Copies</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <!-- <th scope="col">Sno</th>
+              <th scope="col">Book Name</th>
+              <th scope="col">Book ISBN</th>
+    
+              <th scope="col"></th> -->
+                    <th scope="col" *ngFor="let column of headers">
+                        {{column}}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of rows">
+                    <!-- <td>
+                        {{row.sno}}
+                    </td> -->
+                    <td>
+                        {{row.bookname}}
+                    </td>
+                    <td>
+                        <li class="dropdown list-group-item">
+                            <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-sync text-danger"></i><span class="ms-1 d-none d-sm-inline">ISBN</span>
+                            </a>
+                            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
+                                <li><a class="dropdown-item" routerLink="/admin/issue"> ISBN1</a></li>
+                                <li><a class="dropdown-item" (click)="open(content)">ISBN2</a></li>
+                            </ul>
+                        </li>
+            
+                        <!-- {{row.isbn}} -->
+                    </td>
+                    <td><i class="fas fa-edit text-success" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                            aria-controls="offcanvasExample"></i> / <i class="fas fa-trash text-danger"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<!-- bookcopy -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Book</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div>
+            <label> Book Name</label>
+        </div>
+        <select name="books" id="books" class="input_field" [(ngModel)]="copies.name">
+            <option>science</option>
+            <option>history</option>
+            <option>math 12th</option>
+            <option>kids story</option>
+        </select>
+        <div>
+            <label>Book ISBN</label>
+        </div>
+        <input type="text" class="input_field" [(ngModel)]="copies.number">
+    </div>
+    <div class="submit">
+
+        <button type="button" class="btn btn-md btn-outline-primary" (click)="bookCopies()">Submit</button>
+    </div>
+</div>
+<!-- delete -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are You Sure You Want TO <b> Delete</b>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <button type="button" class="btn btn-danger">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// .card{
+//     background:url('https://media.istockphoto.com/vectors/website-header-or-banner-design-with-abstract-geometric-background-vector-id1157596540?k=20&m=1157596540&s=170667a&w=0&h=K9M5wUS4Eu1PZEp7P2qJEPIqc7nHBru9M2ylo8cjjtA=');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     margin-top: 15px;
+//     margin-bottom: 15px;
+//     padding-top: 15px;
+//     color: white;
+//     .img{
+//         margin-top: 22%;
+//     }
+// }

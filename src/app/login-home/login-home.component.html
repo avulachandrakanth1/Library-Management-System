@@ -1,0 +1,36 @@
+<section class="loginform">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 m">
+                <div class="form card "    >
+                    <span class="title text-dark pt-3">
+                        Admin / User Login
+                    </span>
+                    <div class="cardalign">
+                        <div class="formfields">
+                                <input type="number" name="pho_no" class="inputbox" [(ngModel)]="login.pho_no" placeholder="UserName/PhoneNo">
+                        </div>
+                        <div class="formfields">
+                            <input type="password" class="inputbox" [(ngModel)]="login.password" placeholder="Password" >
+                        </div>
+                        <div class="formfields">
+                            <!-- (click)="user(token)" -->
+                            <button class="btn btn-primary login-btn" (click)="admin()">Login</button>
+                            <!-- <button class="btn btn-primary login-btn" (click)="user()">User Login</button> -->
+
+                        </div>
+                    </div>
+                    <div class="forgot">
+                        <span class="forgot">
+                            Forgot
+                        </span>
+                        <a class="forgot_link" href="#">
+                            Password?
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

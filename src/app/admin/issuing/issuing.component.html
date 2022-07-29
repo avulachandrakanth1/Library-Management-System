@@ -1,0 +1,49 @@
+<header>
+<app-header></app-header>
+</header>
+<section class="bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card ">
+                    <div class="container-fluid">
+                        <h3 class="text-center text-uppercase pt-3">Book Issue</h3>
+                       <div class="issue">
+                        <label class="fw-bold mx-2">Select Book :</label>
+                        <select name="books"class="inputbox" id="books" aria-placeholder="select book">
+                            <option >Select</option>
+                            <option >Classic</option>
+                            <option >Tragedy</option>
+                            <option >Fantasy</option>
+                            <option >Romance</option>
+                            <option >Horror</option>
+                        </select>
+                       </div>
+                        <div class="issue">
+                            <label class="fw-bold mx-2">Select User :</label>
+                            <select name="users"class="inputbox" id="users">
+                                <option >Select</option>
+                                <option >Chandrakanth</option>
+                                <option >Haritha</option>
+                                <option >Harini</option>
+                                <option >Preethi</option>
+                                <option >Bhagya</option>
+                            </select>
+                        </div>
+                        <div class="text-left">
+                            <label class="fw-bold mx-2">Issue Date :</label>
+                            <input type="date" class="inputbox">
+                        </div>
+                        <div >
+                            <label class="fw-bold mx-2">Return Date :</label>
+                            <input type="date" class="inputbox">
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary text-center" routerLink="/admin/categories">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,25 @@
+.bg{
+    background-image: url('https://www.integrify.com/site/assets/files/2190/digital-transformation-bpa.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .card {
+    margin: 5% 25%;
+    padding-bottom: 15px;
+    background: linear-gradient(white,lightblue,white);
+
+    .inputbox{
+        font-size: 15px;
+        line-height: 1.5;
+        color: #666;
+        display: block;
+        width: 100%;
+        background: #e6e6e6;
+        height: 50px;
+        border-radius: 15px;
+        padding:0 20px;
+        margin-bottom: 10px;
+        border: 0px;
+    }
+    
+}
+}
